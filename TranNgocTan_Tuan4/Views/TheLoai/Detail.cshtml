@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detail</h2>
+<fieldset>
+    <div class="display-label">Ma loai: @Model.maloai</div>
+    <div class="display-label">Ten loai: @Model.tenloai</div>
+</fieldset>
+@using (Html.BeginForm())
+            {
+                <p>
+                    @Html.ActionLink("Delete", "Delete", new { id = Model.maloai}) 
+                    @Html.ActionLink("Edit", "Edit", new { id = Model.maloai})
+                    @Html.ActionLink("Back to List", "Index")
+                </p>
+            }
+
