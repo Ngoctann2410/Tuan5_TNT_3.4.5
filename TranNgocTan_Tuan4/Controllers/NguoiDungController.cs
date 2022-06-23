@@ -71,6 +71,7 @@ namespace TranNgocTan_Tuan4.Controllers
             if (kh != null)
             {
                 Session["Taikhoan"] = kh;
+                Session["hoten"] = kh.tendangnhap;
                 ViewBag.ThongBao = "Chúc mừng đăng nhập thành công!";
             }
             else
